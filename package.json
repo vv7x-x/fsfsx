@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "description": "FSFS - Forum, Social, Forum, Reels Application (TypeScript + React + Express)",
   "private": true,
-  "type": "module",
   "workspaces": [
     "backend",
     "frontend"
   ],
   "scripts": {
     "dev": "npm run dev --workspace=backend & npm run dev --workspace=frontend",
-    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
-    "start": "npm start --workspace=backend",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
     "install:all": "npm install --legacy-peer-deps && npm install --workspace=backend --legacy-peer-deps && npm install --workspace=frontend --legacy-peer-deps",
     "clean": "rm -rf node_modules backend/node_modules frontend/node_modules && npm install",
     "lint": "npm run lint --workspace=backend && npm run lint --workspace=frontend",
