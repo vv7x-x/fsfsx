@@ -1,0 +1,28 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+GETTING_STARTED.md
+DEPLOYMENT_GUIDE_AR.md
+QUICK_DEPLOY.md
+PROJECT_STRUCTURE.md
+SETUP_GUIDE.md
+MIGRATION_GUIDE.md
+API_REFERENCE.md
+PROJECT_SUMMARY.md
+COMPARISON_GUIDE.md
+COMPLETION_SUMMARY.md
+FINAL_SUMMARY.md
+INDEX.md
+CHECKLIST.md
+README_NEW.md
+
+# Archive
+ارشيف/
+
+# Local
+.env.local
+.DS_Store
+Thumbs.db
