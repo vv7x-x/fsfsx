@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "JWT_SECRET": "@jwt_secret",
+    "VITE_API_URL": "@vite_api_url"
+  },
+  "functions": {
+    "backend/src/server.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/src/server.ts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/dist/index.html"
+    }
+  ]
+}
